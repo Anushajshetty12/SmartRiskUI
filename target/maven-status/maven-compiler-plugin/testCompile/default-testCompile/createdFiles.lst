@@ -1,0 +1,15 @@
+testCases\testdummy.class
+testCases\blogin.class
+pageObjects\Border.class
+testCases\UploadProducts.class
+utilities\Reporting.class
+pageObjects\UploadProduct.class
+pageObjects\BLogin.class
+testCases\Bordercase.class
+utilities\ReadConfig.class
+testCases\BaseClass.class
+testCases\noncatalogupload.class
+pageObjects\LoginPage.class
+testCases\TC_LoginTest_001.class
+utilities\XLUtils.class
+testCases\TC_LoginDDT_002.class
