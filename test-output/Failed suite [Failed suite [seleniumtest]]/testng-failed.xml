@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Failed suite [Failed suite [seleniumtest]]]">
+  <listeners>
+    <listener class-name="utilities.Reporting"/>
+  </listeners>
+  <test thread-count="5" name="wishbook wholesale app(failed)(failed)(failed)">
+    <parameter name="browser" value="firefox"/>
+    <classes>
+      <class name="testCases.TC_LoginTest_001">
+        <methods>
+          <include name="LoginTest"/>
+          <include name="tearDown"/>
+          <include name="Setup"/>
+        </methods>
+      </class> <!-- testCases.TC_LoginTest_001 -->
+    </classes>
+  </test> <!-- wishbook wholesale app(failed)(failed)(failed) -->
+</suite> <!-- Failed suite [Failed suite [Failed suite [seleniumtest]]] -->

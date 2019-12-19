@@ -5,15 +5,15 @@
     <listener class-name="utilities.Reporting"/>
   </listeners>
   <test thread-count="5" name="wishbook wholesale app(failed)">
-    <parameter name="browser" value="chrome"/>
+    <parameter name="browser" value="firefox"/>
     <classes>
-      <class name="testCases.Setmatching">
+      <class name="testCases.TC_LoginTest_001">
         <methods>
-          <include name="setmatching"/>
+          <include name="LoginTest"/>
           <include name="tearDown"/>
           <include name="Setup"/>
         </methods>
-      </class> <!-- testCases.Setmatching -->
+      </class> <!-- testCases.TC_LoginTest_001 -->
     </classes>
   </test> <!-- wishbook wholesale app(failed) -->
 </suite> <!-- Failed suite [seleniumtest] -->

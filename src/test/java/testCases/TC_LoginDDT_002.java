@@ -17,18 +17,20 @@ public class TC_LoginDDT_002 extends BaseClass
 		LoginPage lp=new LoginPage(driver);
 		lp.clearMobileNumber();
 		lp.clearPassword();
+		lp.ClickSignInBTn();
 		lp.SetUserName(user);
 		logger.info("user name provided");
 		lp.SetPassword(pwd);
 		logger.info("password provided");
 		lp.ClickButton();
-		Thread.sleep(2000);
+	}
+		
 		
 		
 		
 	
 		
-	       if(isAlertPresent()==true) 
+	/*       if(isAlertPresent()==true) 
 	    	   
 	       {
 	    	   driver.switchTo().alert().accept();
@@ -61,7 +63,7 @@ public class TC_LoginDDT_002 extends BaseClass
 	    			return false;
 	    		}
 	 
-	    	   }
+	    	   }*/
 
 	
 	@DataProvider(name="LoginData")

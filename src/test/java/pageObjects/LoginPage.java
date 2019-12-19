@@ -14,15 +14,20 @@ public LoginPage(WebDriver rdriver)
 	ldriver=rdriver;
 PageFactory.initElements(rdriver,this);
 }
-@FindBy(id="loginusername")
+
+@FindBy(xpath = "//button[contains(.,'Sign In')]")
+@CacheLookup
+WebElement SignInBtn;
+
+@FindBy(id="username")
 @CacheLookup
 WebElement txtUserName;
 
-@FindBy(name="account_password")
+@FindBy(id="password")
 @CacheLookup
 WebElement txtPassword;
 
-@FindBy(xpath="//button[@type='submit']")
+@FindBy(id="kc-login")
 @CacheLookup
 WebElement txtbtnLogin;
 
@@ -33,6 +38,12 @@ WebElement txtslidebar;
 @FindBy(xpath="/html/body/div[3]/aside[2]/nav/div/div/div/div/ul/li[6]/a")
 @CacheLookup
 WebElement txtbtnLogout;
+
+
+public void ClickSignInBTn()
+{
+	SignInBtn.click();
+}
 
 public void SetUserName(String uname)
 {

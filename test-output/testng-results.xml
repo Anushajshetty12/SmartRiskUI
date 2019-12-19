@@ -1,42 +1,77 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="1" ignored="0" total="1" passed="0">
+<testng-results skipped="0" failed="1" ignored="0" total="3" passed="2">
   <reporter-output>
   </reporter-output>
-  <suite name="seleniumtest" duration-ms="41023" started-at="2019-11-14T07:01:33Z" finished-at="2019-11-14T07:02:14Z">
+  <suite name="SmartRisk" duration-ms="94500" started-at="2019-12-18T13:32:17Z" finished-at="2019-12-18T13:33:52Z">
     <groups>
     </groups>
-    <test name="wishbook wholesale app" duration-ms="41023" started-at="2019-11-14T07:01:33Z" finished-at="2019-11-14T07:02:14Z">
-      <class name="testCases.Setmatching">
-        <test-method status="PASS" signature="Setup(java.lang.String)[pri:0, instance:testCases.Setmatching@53b32d7]" name="Setup" is-config="true" duration-ms="13383" started-at="2019-11-14T07:01:34Z" finished-at="2019-11-14T07:01:47Z">
+    <test name="SmartRisk" duration-ms="94500" started-at="2019-12-18T13:32:17Z" finished-at="2019-12-18T13:33:52Z">
+      <class name="testCases.TC_OverviewMap">
+        <test-method status="PASS" signature="Setup(java.lang.String)[pri:0, instance:testCases.TC_OverviewMap@1a968a59]" name="Setup" is-config="true" duration-ms="8698" started-at="2019-12-18T13:32:35Z" finished-at="2019-12-18T13:32:44Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[chrome]]>
+                <![CDATA[firefox]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method status="FAIL" signature="setmatching()[pri:3, instance:testCases.Setmatching@53b32d7]" name="setmatching" duration-ms="26393" started-at="2019-11-14T07:01:47Z" finished-at="2019-11-14T07:02:13Z">
-          <exception class="java.lang.NullPointerException">
+        <test-method status="PASS" signature="border()[pri:1, instance:testCases.TC_OverviewMap@1a968a59]" name="border" duration-ms="23987" started-at="2019-12-18T13:32:44Z" finished-at="2019-12-18T13:33:08Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- border -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.TC_OverviewMap@1a968a59]" name="tearDown" is-config="true" duration-ms="5541" started-at="2019-12-18T13:33:08Z" finished-at="2019-12-18T13:33:14Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.TC_OverviewMap -->
+      <class name="testCases.TC_OverviewDashboard">
+        <test-method status="PASS" signature="Setup(java.lang.String)[pri:0, instance:testCases.TC_OverviewDashboard@4667ae56]" name="Setup" is-config="true" duration-ms="8070" started-at="2019-12-18T13:33:14Z" finished-at="2019-12-18T13:33:22Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method status="PASS" signature="border()[pri:2, instance:testCases.TC_OverviewDashboard@4667ae56]" name="border" duration-ms="24835" started-at="2019-12-18T13:33:22Z" finished-at="2019-12-18T13:33:46Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- border -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.TC_OverviewDashboard@4667ae56]" name="tearDown" is-config="true" duration-ms="5353" started-at="2019-12-18T13:33:46Z" finished-at="2019-12-18T13:33:52Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
+      </class> <!-- testCases.TC_OverviewDashboard -->
+      <class name="testCases.TC_LoginTest_001">
+        <test-method status="PASS" signature="Setup(java.lang.String)[pri:0, instance:testCases.TC_LoginTest_001@548e7350]" name="Setup" is-config="true" duration-ms="9186" started-at="2019-12-18T13:32:17Z" finished-at="2019-12-18T13:32:27Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[firefox]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- Setup -->
+        <test-method status="FAIL" signature="LoginTest()[pri:0, instance:testCases.TC_LoginTest_001@548e7350]" name="LoginTest" duration-ms="3509" started-at="2019-12-18T13:32:27Z" finished-at="2019-12-18T13:32:30Z">
+          <exception class="java.lang.AssertionError">
+            <message>
+              <![CDATA[expected [true] but found [false]]]>
+            </message>
             <full-stacktrace>
-              <![CDATA[java.lang.NullPointerException
-at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-at java.lang.reflect.Method.invoke(Unknown Source)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at com.sun.proxy.$Proxy11.isDisplayed(Unknown Source)
-at org.openqa.selenium.support.ui.ExpectedConditions.elementIfVisible(ExpectedConditions.java:315)
-at org.openqa.selenium.support.ui.ExpectedConditions.access$100(ExpectedConditions.java:44)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:301)
-at org.openqa.selenium.support.ui.ExpectedConditions$10.apply(ExpectedConditions.java:298)
-at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:686)
-at org.openqa.selenium.support.ui.ExpectedConditions$23.apply(ExpectedConditions.java:682)
-at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:260)
-at pageObjects.UploadProduct.uploadProducts(UploadProduct.java:211)
-at testCases.Setmatching.setmatching(Setmatching.java:25)
+              <![CDATA[java.lang.AssertionError: expected [true] but found [false]
+at org.testng.Assert.fail(Assert.java:96)
+at org.testng.Assert.failNotEquals(Assert.java:776)
+at org.testng.Assert.assertTrue(Assert.java:44)
+at org.testng.Assert.assertTrue(Assert.java:54)
+at testCases.TC_LoginTest_001.LoginTest(TC_LoginTest_001.java:44)
 at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
 at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
@@ -64,15 +99,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- java.lang.NullPointerException -->
+          </exception> <!-- java.lang.AssertionError -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- setmatching -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.Setmatching@53b32d7]" name="tearDown" is-config="true" duration-ms="1035" started-at="2019-11-14T07:02:13Z" finished-at="2019-11-14T07:02:14Z">
+        </test-method> <!-- LoginTest -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:testCases.TC_LoginTest_001@548e7350]" name="tearDown" is-config="true" duration-ms="5120" started-at="2019-12-18T13:32:30Z" finished-at="2019-12-18T13:32:35Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testCases.Setmatching -->
-    </test> <!-- wishbook wholesale app -->
-  </suite> <!-- seleniumtest -->
+      </class> <!-- testCases.TC_LoginTest_001 -->
+    </test> <!-- SmartRisk -->
+  </suite> <!-- SmartRisk -->
 </testng-results>

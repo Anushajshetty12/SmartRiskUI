@@ -1,19 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="seleniumtest">
+<suite name="SmartRisk">
 <listeners>
 <listener class-name="utilities.Reporting"/>
 </listeners>
-<test name="wishbook wholesale app">
-<parameter name="browser" value="chrome"/>
+<test name="SmartRisk">
+<parameter name="browser" value="firefox"/>
 <classes>
-<!--  <class name="testCases.TC_LoginTest_001"/>-->
-<!-- <class name="testCases.TC_LoginDDT_002"/>-->
-<!-- <class name="testCases.UploadProducts"/> -->
-<!--<class name="testCases.noncatalogupload"/>-->
-<class name="testCases.Setmatching"/>
- <!--<class name="testCases.blogin"/>-->
-<!--<class name="testCases.Bordercase"/> -->
+<class name="testCases.TC_LoginTest_001"/>
+<class name="testCases.TC_OverviewMap"/>
+<class name="testCases.TC_OverviewDashboard"/>
 </classes>
 </test>
 </suite>

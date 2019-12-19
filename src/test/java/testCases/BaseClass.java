@@ -1,7 +1,5 @@
 package testCases;
 
-
-
 import java.io.File;
 import java.io.IOException;
 import java.util.concurrent.TimeUnit;
@@ -19,12 +17,18 @@ import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.Parameters;
 
-
 import utilities.ReadConfig;
 
+/**
+ * 
+ * @author Anusha Shetty
+ *
+ */
 public class BaseClass {
-	ReadConfig readconfig=new ReadConfig();//creating config class object where all the generic details stored
-	public String baseURl=readconfig.getApplicationUrl();
+	ReadConfig readconfig = new ReadConfig();
+	/*
+	 * //creating config class object where all the generic details stored
+	 */ 	public String baseURl=readconfig.getApplicationUrl();
 	public String bliteUrl=readconfig.getbliteUrl();
 	public String username=readconfig.getusername();
 	public String password=readconfig.getpassword();
@@ -47,10 +51,11 @@ public class BaseClass {
 			System.setProperty("webdriver.gecko.driver",readconfig.getfirefoxpath());//get the path of the firefox driver
 			driver=new FirefoxDriver();//
 				}
-		driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);//waits after opening browser and before entering url
+	//	driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);//waits after opening browser and before entering url
 		driver.get(baseURl);
 		//driver.get(bliteUrl);
 		driver.manage().window().maximize();//maximizes the window based on br value
+		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 	}
 	

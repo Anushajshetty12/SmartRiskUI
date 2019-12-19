@@ -54,6 +54,7 @@ public class ReadConfig
 	{
 		String firefoxpath=pro.getProperty("firefoxpath");
 		return firefoxpath;
+		
 	
 	}
 }
