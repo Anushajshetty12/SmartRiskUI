@@ -1,15 +1,23 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite name="SmartRisk">
+<suite name="FlipkartAutomation">
 <listeners>
 <listener class-name="utilities.Reporting"/>
 </listeners>
-<test name="SmartRisk">
-<parameter name="browser" value="firefox"/>
+<parameter name="browser" value="chrome"/>
+<test name="Flipkart" group-by-instances="true">
+<!-- <groups>
+<run>
+<include name="smoke" />
+</run>
+</groups> -->
 <classes>
-<class name="testCases.TC_LoginTest_001"/>
-<class name="testCases.TC_OverviewMap"/>
-<class name="testCases.TC_OverviewDashboard"/>
+<!-- <class name="testCases.TC_LoginTest_001"/>
+<class name="testCases.TC_Products"/> -->
+<!-- <class name="testCases.TC_Login"/> -->
+<class name="testCases.TC_Profile"/>
+<!-- <class name="testCases.TC_OverviewMap"/>
+<class name="testCases.TC_OverviewDashboard"/> -->
 </classes>
 </test>
 </suite>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Failed suite [Dummy]" guice-stage="DEVELOPMENT">
+  <listeners>
+    <listener class-name="utilities.Reporting"/>
+  </listeners>
+  <test thread-count="5" name="SmartRisk(failed)">
+    <parameter name="browser" value="chrome"/>
+    <classes>
+      <class name="testCases.TC_Profile">
+        <methods>
+          <include name="emailvalidation"/>
+          <include name="tearDown"/>
+          <include name="Setup"/>
+        </methods>
+      </class> <!-- testCases.TC_Profile -->
+    </classes>
+  </test> <!-- SmartRisk(failed) -->
+</suite> <!-- Failed suite [Dummy] -->

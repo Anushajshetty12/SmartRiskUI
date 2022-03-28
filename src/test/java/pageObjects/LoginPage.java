@@ -7,7 +7,8 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 
-public class LoginPage {
+public class LoginPage
+{
 WebDriver ldriver;
 public LoginPage(WebDriver rdriver)
 {
@@ -39,49 +40,44 @@ WebElement txtslidebar;
 @CacheLookup
 WebElement txtbtnLogout;
 
+@FindBy(xpath = "//button[contains(.,'✕')]")
+@CacheLookup
+WebElement CloseButton;
 
-public void ClickSignInBTn()
+
+
+
+public void login()
 {
-	SignInBtn.click();
-}
-
-public void SetUserName(String uname)
-{
-	txtUserName.sendKeys(uname);
-}
-
-public void SetPassword(String pwd)
-{
-	
-	txtPassword.sendKeys(pwd);
-}
-
-public void ClickButton()
-{
-	
-	txtbtnLogin.click();
-	
-}
-
-public void slidebar()
-{
-	txtslidebar.click();
+	CloseButton.click();
 }
 
 
-public void clickLogout()
-{
-	txtbtnLogout.click();
-}
 
-public void clearMobileNumber() {
-	txtUserName.clear();
-}
-
-public void clearPassword() {
-	txtPassword.clear();
-}
-
+/*
+ * public void ClickSignInBTn() { SignInBtn.click(); }
+ * 
+ * public void SetUserName(String uname) { txtUserName.sendKeys(uname); }
+ * 
+ * public void SetPassword(String pwd) {
+ * 
+ * txtPassword.sendKeys(pwd); }
+ * 
+ * public void ClickButton() {
+ * 
+ * txtbtnLogin.click();
+ * 
+ * }
+ * 
+ * public void slidebar() { txtslidebar.click(); }
+ * 
+ * 
+ * public void clickLogout() { txtbtnLogout.click(); }
+ * 
+ * public void clearMobileNumber() { txtUserName.clear(); }
+ * 
+ * public void clearPassword() { txtPassword.clear(); }
+ */
 	
 	
 }

@@ -11,8 +11,14 @@ import pageObjects.LoginPage;
 
 public class TC_LoginTest_001 extends BaseClass {
 	@Test(priority = 0)
-
-	public void LoginTest() throws IOException, InterruptedException {
+public void login()
+{
+		LoginPage login=new LoginPage(driver);
+		login.login();
+		
+				
+}
+	/*public void LoginTest() throws IOException, InterruptedException {
 
 		driver.get(baseURl);
 		logger.info("url is opened");
@@ -49,6 +55,6 @@ public class TC_LoginTest_001 extends BaseClass {
 
 		}
 
-	}
+	}*/
 
 }

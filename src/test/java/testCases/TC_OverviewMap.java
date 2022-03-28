@@ -9,7 +9,7 @@ import pageObjects.LoginPage;
 
 //import pageObjects.BLogin;
 
-public class TC_OverviewMap extends BaseClass {
+/*public class TC_OverviewMap extends BaseClass {
 	
 	@Test(priority=1)
 	public void border() throws InterruptedException
@@ -28,7 +28,7 @@ public class TC_OverviewMap extends BaseClass {
 		
 	
 		
-		
-	}
+	}	
+	}*/
 
-}
+

@@ -24,21 +24,21 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
         <span>All suites</span>
-        <a href="#" title="Collapse/expand all the suites" class="collapse-all-link">
-          <img src="collapseall.gif" class="collapse-all-icon">
+        <a href="#" class="collapse-all-link" title="Collapse/expand all the suites">
+          <img class="collapse-all-icon" src="collapseall.gif">
           </img> <!-- collapse-all-icon -->
         </a> <!-- collapse-all-link -->
       </div> <!-- navigator-suite-header -->
       <div class="suite">
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
-            <a href="#" panel-name="suite-seleniumtest" class="navigator-link">
-              <span class="suite-name border-failed">seleniumtest</span>
+            <a href="#" class="navigator-link" panel-name="suite-Dummy">
+              <span class="suite-name border-passed">Dummy</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -48,37 +48,37 @@
             <div class="suite-section-content">
               <ul>
                 <li>
-                  <a href="#" panel-name="test-xml-seleniumtest" class="navigator-link ">
-                    <span>C:\Users\Catalog\eclipse-workspace\seleniumtest\TestNG.xml</span>
+                  <a href="#" class="navigator-link " panel-name="test-xml-Dummy">
+                    <span>C:\Users\anusshet\Desktop\Automation\SmartRiskUI\TestNG.xml</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="testlist-seleniumtest" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="testlist-Dummy">
                     <span class="test-stats">1 test</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="group-seleniumtest" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="group-Dummy">
                     <span>0 groups</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="times-seleniumtest" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="times-Dummy">
                     <span>Times</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="reporter-seleniumtest" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="reporter-Dummy">
                     <span>Reporter output</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="ignored-methods-seleniumtest" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="ignored-methods-Dummy">
                     <span>Ignored methods</span>
                   </a> <!-- navigator-link  -->
                 </li>
                 <li>
-                  <a href="#" panel-name="chronological-seleniumtest" class="navigator-link ">
+                  <a href="#" class="navigator-link " panel-name="chronological-Dummy">
                     <span>Chronological view</span>
                   </a> <!-- navigator-link  -->
                 </li>
@@ -91,21 +91,26 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">1 method, 1 failed,   </span>
+                    <span class="method-stats">2 methods,   2 passed</span>
                   </li>
                   <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-seleniumtest" class="hide-methods failed suite-seleniumtest"> (hide)</a> <!-- hide-methods failed suite-seleniumtest -->
-                      <a href="#" panel-name="suite-seleniumtest" class="show-methods failed suite-seleniumtest"> (show)</a> <!-- show-methods failed suite-seleniumtest -->
+                    <span class="method-list-title passed">Passed methods</span>
+                    <span class="show-or-hide-methods passed">
+                      <a href="#" panel-name="suite-Dummy" class="hide-methods passed suite-Dummy"> (hide)</a> <!-- hide-methods passed suite-Dummy -->
+                      <a href="#" panel-name="suite-Dummy" class="show-methods passed suite-Dummy"> (show)</a> <!-- show-methods passed suite-Dummy -->
                     </span>
-                    <div class="method-list-content failed suite-seleniumtest">
+                    <div class="method-list-content passed suite-Dummy">
                       <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-seleniumtest" title="testCases.UploadProducts" class="method navigator-link" hash-for-method="uploadProducts">uploadProducts</a> <!-- method navigator-link -->
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Dummy" title="testCases.TC_Profile" hash-for-method="gendervalidation">gendervalidation</a> <!-- method navigator-link -->
                       </span>
                       <br/>
-                    </div> <!-- method-list-content failed suite-seleniumtest -->
+                      <span>
+                        <img width="3%" src="passed.png"/>
+                        <a href="#" class="method navigator-link" panel-name="suite-Dummy" title="testCases.TC_Profile" hash-for-method="navigatetoprofilepage">navigatetoprofilepage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                    </div> <!-- method-list-content passed suite-Dummy -->
                   </li>
                 </ul>
               </div> <!-- suite-section-content -->
@@ -116,134 +121,140 @@
     </div> <!-- navigator-root -->
     <div class="wrapper">
       <div class="main-panel-root">
-        <div panel-name="suite-seleniumtest" class="panel seleniumtest">
-          <div class="suite-seleniumtest-class-failed">
+        <div panel-name="suite-Dummy" class="panel Dummy">
+          <div class="suite-Dummy-class-passed">
             <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">testCases.UploadProducts</span>
+              <img src="passed.png"/>
+              <span class="class-name">testCases.TC_Profile</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="uploadProducts">
-                  </a> <!-- uploadProducts -->
-                  <span class="method-name">uploadProducts</span>
-                  <div class="stack-trace">java.lang.NullPointerException
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at com.sun.proxy.$Proxy12.sendKeys(Unknown Source)
-	at pageObjects.UploadProduct.sendtitle(UploadProduct.java:248)
-	at testCases.UploadProducts.uploadProducts(UploadProducts.java:48)
-... Removed 29 stack frames
-</div> <!-- stack-trace -->
+                  <a name="gendervalidation">
+                  </a> <!-- gendervalidation -->
+                  <span class="method-name">gendervalidation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="navigatetoprofilepage">
+                  </a> <!-- navigatetoprofilepage -->
+                  <span class="method-name">navigatetoprofilepage</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-seleniumtest-class-failed -->
-        </div> <!-- panel seleniumtest -->
-        <div panel-name="test-xml-seleniumtest" class="panel">
+          </div> <!-- suite-Dummy-class-passed -->
+        </div> <!-- panel Dummy -->
+        <div panel-name="test-xml-Dummy" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">C:\Users\Catalog\eclipse-workspace\seleniumtest\TestNG.xml</span>
+            <span class="header-content">C:\Users\anusshet\Desktop\Automation\SmartRiskUI\TestNG.xml</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <pre>
 &lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?&gt;
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
-&lt;suite name=&quot;seleniumtest&quot; guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot;&gt;
+&lt;suite guice-stage=&quot;DEVELOPMENT&quot; verbose=&quot;0&quot; name=&quot;Dummy&quot;&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;utilities.Reporting&quot;/&gt;
   &lt;/listeners&gt;
-  &lt;test thread-count=&quot;5&quot; name=&quot;wishbook wholesale app&quot; verbose=&quot;0&quot;&gt;
+  &lt;test thread-count=&quot;5&quot; verbose=&quot;0&quot; name=&quot;SmartRisk&quot;&gt;
     &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testCases.UploadProducts&quot;/&gt;
+      &lt;class name=&quot;testCases.TC_Profile&quot;/&gt;
     &lt;/classes&gt;
-  &lt;/test&gt; &lt;!-- wishbook wholesale app --&gt;
-&lt;/suite&gt; &lt;!-- seleniumtest --&gt;
+  &lt;/test&gt; &lt;!-- SmartRisk --&gt;
+&lt;/suite&gt; &lt;!-- Dummy --&gt;
             </pre>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="testlist-seleniumtest" class="panel">
+        <div panel-name="testlist-Dummy" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Tests for seleniumtest</span>
+            <span class="header-content">Tests for Dummy</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <ul>
               <li>
-                <span class="test-name">wishbook wholesale app (1 class)</span>
+                <span class="test-name">SmartRisk (1 class)</span>
               </li>
             </ul>
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="group-seleniumtest" class="panel">
+        <div panel-name="group-Dummy" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Groups for seleniumtest</span>
+            <span class="header-content">Groups for Dummy</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="times-seleniumtest" class="panel">
+        <div panel-name="times-Dummy" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Times for seleniumtest</span>
+            <span class="header-content">Times for Dummy</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="times-div">
               <script type="text/javascript">
-suiteTableInitFunctions.push('tableData_seleniumtest');
-function tableData_seleniumtest() {
+suiteTableInitFunctions.push('tableData_Dummy');
+function tableData_Dummy() {
 var data = new google.visualization.DataTable();
 data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(1);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'uploadProducts')
-data.setCell(0, 2, 'testCases.UploadProducts')
-data.setCell(0, 3, 21601);
-window.suiteTableData['seleniumtest']= { tableData: data, tableDiv: 'times-div-seleniumtest'}
+data.setCell(0, 1, 'navigatetoprofilepage')
+data.setCell(0, 2, 'testCases.TC_Profile')
+data.setCell(0, 3, 4924);
+data.setCell(1, 0, 1)
+data.setCell(1, 1, 'gendervalidation')
+data.setCell(1, 2, 'testCases.TC_Profile')
+data.setCell(1, 3, 28);
+window.suiteTableData['Dummy']= { tableData: data, tableDiv: 'times-div-Dummy'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 21 seconds</span>
-              <div id="times-div-seleniumtest">
-              </div> <!-- times-div-seleniumtest -->
+              <span class="suite-total-time">Total running time: 4 seconds</span>
+              <div id="times-div-Dummy">
+              </div> <!-- times-div-Dummy -->
             </div> <!-- times-div -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="reporter-seleniumtest" class="panel">
+        <div panel-name="reporter-Dummy" class="panel">
           <div class="main-panel-header rounded-window-top">
-            <span class="header-content">Reporter output for seleniumtest</span>
+            <span class="header-content">Reporter output for Dummy</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="ignored-methods-seleniumtest" class="panel">
+        <div panel-name="ignored-methods-Dummy" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">0 ignored methods</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->
-        <div panel-name="chronological-seleniumtest" class="panel">
+        <div panel-name="chronological-Dummy" class="panel">
           <div class="main-panel-header rounded-window-top">
             <span class="header-content">Methods in chronological order</span>
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testCases.UploadProducts</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testCases.TC_Profile</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">Setup(chrome)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">uploadProducts</span>
-                <span class="method-start">37657 ms</span>
+                <span class="method-name">navigatetoprofilepage</span>
+                <span class="method-start">4481 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">gendervalidation</span>
+                <span class="method-start">9425 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">60160 ms</span>
+                <span class="method-start">9453 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

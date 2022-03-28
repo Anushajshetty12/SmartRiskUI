@@ -13,8 +13,10 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.remote.RemoteWebDriver;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.Listeners;
 import org.testng.annotations.Parameters;
 
 import utilities.ReadConfig;
@@ -27,8 +29,8 @@ import utilities.ReadConfig;
 public class BaseClass {
 	ReadConfig readconfig = new ReadConfig();
 	/*
-	 * //creating config class object where all the generic details stored
-	 */ 	public String baseURl=readconfig.getApplicationUrl();
+	 * //creating config class object where all the generic details stored*/
+	public String baseURl=readconfig.getApplicationUrl();
 	public String bliteUrl=readconfig.getbliteUrl();
 	public String username=readconfig.getusername();
 	public String password=readconfig.getpassword();
@@ -39,12 +41,12 @@ public class BaseClass {
 	@BeforeClass
 	public void Setup(String br)//testng.xml>>in paramemter class value is passes(which is br here)
 	{
-		logger=Logger.getLogger("wishbook");
+		logger=Logger.getLogger("Flipkart");
 		PropertyConfigurator.configure("Log4j.properties");//access to log4j.properties here
 		if(br.equals("chrome"))
 				{
 		System.setProperty("webdriver.chrome.driver",readconfig.getchromepath());//get the path of the chrome driver
-		driver=new ChromeDriver();
+		 driver=new ChromeDriver();
 				}
 		else if(br.equals("firefox"))
 				{
@@ -56,6 +58,8 @@ public class BaseClass {
 		//driver.get(bliteUrl);
 		driver.manage().window().maximize();//maximizes the window based on br value
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
+		
+		
 		
 	}
 	
@@ -82,13 +86,13 @@ public class BaseClass {
 	public String randomeString()
 	{
 		
-		String generatedString=RandomStringUtils.randomAlphabetic(5); //this is used for iterative testing where same name is not allowed
+		String generatedString=RandomStringUtils.randomAlphabetic(3); //this is used for iterative testing where same name is not allowed
 		return(generatedString);
 	}
 	public String randomenumber()
 	{
 		
-		String generatednumber=RandomStringUtils.randomAlphanumeric(5);//this is used for iterative testing where same number is not allowed
+		String generatednumber=RandomStringUtils.randomAlphanumeric(3);//this is used for iterative testing where same number is not allowed
 		return(generatednumber);
 	}
 

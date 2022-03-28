@@ -8,15 +8,32 @@
 <body>
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
-<tr><th colspan="7">SmartRisk</th></tr>
-<tr><td><a href="#t0">SmartRisk</a></td><td class="num">2</td><td class="num">0</td><td class="num attn">1</td><td class="num">94,500</td><td></td><td></td></tr>
+<tr><th colspan="7">FlipkartAutomation</th></tr>
+<tr><td><a href="#t0">Flipkart</a></td><td class="num">2</td><td class="num">0</td><td class="num attn">1</td><td class="num">11,467</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">SmartRisk</th></tr></tbody><tbody id="t0"><tr><th colspan="4">SmartRisk &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testCases.TC_LoginTest_001</td><td><a href="#m0">LoginTest</a></td><td rowspan="1">1576675947178</td><td rowspan="1">3509</td></tr><tr><th colspan="4">SmartRisk &#8212; passed</th></tr><tr class="passedeven"><td rowspan="1">testCases.TC_OverviewDashboard</td><td><a href="#m1">border</a></td><td rowspan="1">1576676002130</td><td rowspan="1">24835</td></tr><tr class="passedodd"><td rowspan="1">testCases.TC_OverviewMap</td><td><a href="#m2">border</a></td><td rowspan="1">1576675964530</td><td rowspan="1">23987</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">FlipkartAutomation</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Flipkart &#8212; failed</th></tr><tr class="failedeven"><td rowspan="1">testCases.TC_Profile</td><td><a href="#m0">emailvalidation</a></td><td rowspan="1">1648479383294</td><td rowspan="1">1462</td></tr><tr><th colspan="4">Flipkart &#8212; passed</th></tr><tr class="passedeven"><td rowspan="2">testCases.TC_Profile</td><td><a href="#m1">gendervalidation</a></td><td rowspan="1">1648479383270</td><td rowspan="1">22</td></tr><tr class="passedeven"><td><a href="#m2">navigatetoprofilepage</a></td><td rowspan="1">1648479378371</td><td rowspan="1">4880</td></tr></tbody>
 </table>
-<h2>SmartRisk</h2><h3 id="m0">testCases.TC_LoginTest_001#LoginTest</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">java.lang.AssertionError: expected [true] but found [false]
-	at testCases.TC_LoginTest_001.LoginTest(TC_LoginTest_001.java:44)
-... Removed 29 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m1">testCases.TC_OverviewDashboard#border</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
-<h3 id="m2">testCases.TC_OverviewMap#border</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h2>Flipkart</h2><h3 id="m0">testCases.TC_Profile#emailvalidation</h3><table class="result"><tr><th>Exception</th></tr><tr><td><div class="stacktrace">org.openqa.selenium.ElementNotInteractableException: element not interactable
+  (Session info: chrome=99.0.4844.82)
+Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
+System info: host: &apos;ANUSSHET-7420&apos;, ip: &apos;192.168.0.102&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\anusshet\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61925}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 207a1050e59a865b3b74c2161e6d5f15
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
+	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:100)
+	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
+	at jdk.proxy2/jdk.proxy2.$Proxy15.sendKeys(Unknown Source)
+	at pageObjects.Profile.validategmail(Profile.java:177)
+	at testCases.TC_Profile.emailvalidation(TC_Profile.java:43)
+... Removed 34 stack frames</div></td></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m1">testCases.TC_Profile#gendervalidation</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
+<h3 id="m2">testCases.TC_Profile#navigatetoprofilepage</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 </body>
 </html>
