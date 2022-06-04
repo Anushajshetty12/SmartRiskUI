@@ -1,11 +1,18 @@
 package testCases;
 
+import java.io.FileNotFoundException;
+
 import org.openqa.selenium.WebDriver;
 import org.testng.annotations.Test;
 
 import pageObjects.Profile;
 import pageObjects.UserLogin;
-
+  
+/**
+ * this class verifies the profile page functionality
+ * @author anusshet
+ *
+ */
 
 
 
@@ -18,10 +25,11 @@ public class TC_Profile extends BaseClass
 	  { 
 		  String s="Abc"+randomeString();
 	  String q="Abc"+randomeString(); 
-	  UserLogin u=new UserLogin(driver);
+	  UserLogin u=new UserLogin(BaseClass.driver);
 	  u.userlogin(username, password);
-	  Profile p=new Profile(driver);
-	  p.givename(s,q); 
+	  Profile p=new Profile(BaseClass.driver);
+	  p.navigateMyProfile();
+	  p.updateProfile(s, q);
 	  
 	  }
 	 

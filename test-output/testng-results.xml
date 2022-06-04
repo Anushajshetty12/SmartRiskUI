@@ -1,71 +1,53 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results ignored="0" total="3" passed="2" failed="1" skipped="0">
+<testng-results ignored="0" total="2" passed="1" failed="1" skipped="0">
   <reporter-output>
   </reporter-output>
-  <suite started-at="2022-03-28T14:56:13Z" name="FlipkartAutomation" finished-at="2022-03-28T14:56:24Z" duration-ms="11467">
+  <suite started-at="2022-05-30T15:05:51Z" name="FlipkartAutomation" finished-at="2022-05-30T15:07:02Z" duration-ms="71369">
     <groups>
     </groups>
-    <test started-at="2022-03-28T14:56:13Z" name="Flipkart" finished-at="2022-03-28T14:56:24Z" duration-ms="11467">
-      <class name="testCases.TC_Profile">
-        <test-method is-config="true" signature="Setup(java.lang.String)[pri:0, instance:testCases.TC_Profile@1e178745]" started-at="2022-03-28T14:56:13Z" name="Setup" finished-at="2022-03-28T14:56:18Z" duration-ms="4785" status="PASS">
+    <test started-at="2022-05-30T15:05:51Z" name="Flipkart" finished-at="2022-05-30T15:07:02Z" duration-ms="71369">
+      <class name="testCases.TC_ManageAddress">
+        <test-method is-config="true" signature="Setup(java.lang.String, java.lang.String)[pri:0, instance:testCases.TC_ManageAddress@26b3fd41]" started-at="2022-05-30T15:05:51Z" name="Setup" finished-at="2022-05-30T15:06:28Z" duration-ms="37190" status="PASS">
           <params>
             <param index="0">
               <value>
                 <![CDATA[chrome]]>
               </value>
             </param>
+            <param index="1">
+              <value>
+                <![CDATA[BASE]]>
+              </value>
+            </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- Setup -->
-        <test-method signature="navigatetoprofilepage()[pri:0, instance:testCases.TC_Profile@1e178745]" started-at="2022-03-28T14:56:18Z" name="navigatetoprofilepage" finished-at="2022-03-28T14:56:23Z" duration-ms="4880" status="PASS">
+        <test-method signature="readData()[pri:4, instance:testCases.TC_ManageAddress@26b3fd41]" started-at="2022-05-30T15:06:28Z" name="readData" finished-at="2022-05-30T15:06:28Z" duration-ms="13" status="PASS">
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- navigatetoprofilepage -->
-        <test-method signature="gendervalidation()[pri:1, instance:testCases.TC_Profile@1e178745]" started-at="2022-03-28T14:56:23Z" name="gendervalidation" finished-at="2022-03-28T14:56:23Z" duration-ms="22" status="PASS">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- gendervalidation -->
-        <test-method signature="emailvalidation()[pri:2, instance:testCases.TC_Profile@1e178745]" started-at="2022-03-28T14:56:23Z" name="emailvalidation" finished-at="2022-03-28T14:56:24Z" duration-ms="1462" status="FAIL">
-          <exception class="org.openqa.selenium.ElementNotInteractableException">
+        </test-method> <!-- readData -->
+        <test-method signature="manageAddress()[pri:5, instance:testCases.TC_ManageAddress@26b3fd41]" started-at="2022-05-30T15:06:28Z" name="manageAddress" finished-at="2022-05-30T15:07:02Z" duration-ms="33786" status="FAIL">
+          <exception class="org.openqa.selenium.TimeoutException">
             <message>
-              <![CDATA[element not interactable
-  (Session info: chrome=99.0.4844.82)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'ANUSSHET-7420', ip: '192.168.0.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+              <![CDATA[Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on WINDOWS (c1e43b01e50596694939aa6b74053dc1)] -> xpath: //div[@class='_3E8aIl _1UHYca'][contains(.,'EditDelete')]] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ANUSSHET-7420', ip: '192.168.0.101', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\anusshet\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61925}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 207a1050e59a865b3b74c2161e6d5f15]]>
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.62, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\anusshet\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58001}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c1e43b01e50596694939aa6b74053dc1]]>
             </message>
             <full-stacktrace>
-              <![CDATA[org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=99.0.4844.82)
-Build info: version: '3.14.0', revision: 'aacccce0', time: '2018-08-02T20:19:58.91Z'
-System info: host: 'ANUSSHET-7420', ip: '192.168.0.102', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
+              <![CDATA[org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on WINDOWS (c1e43b01e50596694939aa6b74053dc1)] -> xpath: //div[@class='_3E8aIl _1UHYca'][contains(.,'EditDelete')]] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'ANUSSHET-7420', ip: '192.168.0.101', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '16.0.2'
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\anusshet\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61925}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 207a1050e59a865b3b74c2161e6d5f15
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance0(Native Method)
-at java.base/jdk.internal.reflect.NativeConstructorAccessorImpl.newInstance(NativeConstructorAccessorImpl.java:78)
-at java.base/jdk.internal.reflect.DelegatingConstructorAccessorImpl.newInstance(DelegatingConstructorAccessorImpl.java:45)
-at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
-at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:480)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
-at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:100)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
-at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
-at java.base/java.lang.reflect.Method.invoke(Method.java:567)
-at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-at jdk.proxy2/jdk.proxy2.$Proxy15.sendKeys(Unknown Source)
-at pageObjects.Profile.validategmail(Profile.java:177)
-at testCases.TC_Profile.emailvalidation(TC_Profile.java:43)
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.62, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\anusshet\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58001}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c1e43b01e50596694939aa6b74053dc1
+at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+at pageObjects.ManageAddress.manageAddress1(ManageAddress.java:109)
+at testCases.TC_ManageAddress.manageAddress(TC_ManageAddress.java:43)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:78)
 at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
@@ -93,15 +75,15 @@ at org.testng.remote.RemoteTestNG.initAndRun(RemoteTestNG.java:251)
 at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 ]]>
             </full-stacktrace>
-          </exception> <!-- org.openqa.selenium.ElementNotInteractableException -->
+          </exception> <!-- org.openqa.selenium.TimeoutException -->
           <reporter-output>
           </reporter-output>
-        </test-method> <!-- emailvalidation -->
-        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC_Profile@1e178745]" started-at="2022-03-28T14:56:24Z" name="tearDown" finished-at="2022-03-28T14:56:24Z" duration-ms="144" status="PASS">
+        </test-method> <!-- manageAddress -->
+        <test-method is-config="true" signature="tearDown()[pri:0, instance:testCases.TC_ManageAddress@26b3fd41]" started-at="2022-05-30T15:07:02Z" name="tearDown" finished-at="2022-05-30T15:07:02Z" duration-ms="178" status="PASS">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
-      </class> <!-- testCases.TC_Profile -->
+      </class> <!-- testCases.TC_ManageAddress -->
     </test> <!-- Flipkart -->
   </suite> <!-- FlipkartAutomation -->
 </testng-results>

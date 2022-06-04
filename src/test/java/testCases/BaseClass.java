@@ -31,17 +31,19 @@ public class BaseClass {
 	/*
 	 * //creating config class object where all the generic details stored*/
 	public String baseURl=readconfig.getApplicationUrl();
+	public String QAURL=readconfig.getApplicationQAUrl();
 	public String bliteUrl=readconfig.getbliteUrl();
 	public String username=readconfig.getusername();
 	public String password=readconfig.getpassword();
 	public static WebDriver driver;//can be used throughout this page and constant value
 	public static Logger logger; //prints logger info/warning on console
 	
-	@Parameters("browser")//testng.xml has parameter metioned this access from testng.xml
+	//@SuppressWarnings("deprecation")
+	@Parameters({"browser","url"})//testng.xml has parameter metioned this access from testng.xml
 	@BeforeClass
-	public void Setup(String br)//testng.xml>>in paramemter class value is passes(which is br here)
+	public void Setup(String br,String url1)//testng.xml>>in paramemter class value is passes(which is br here)
 	{
-		logger=Logger.getLogger("Flipkart");
+		logger=Logger.getLogger("BaseClass");
 		PropertyConfigurator.configure("Log4j.properties");//access to log4j.properties here
 		if(br.equals("chrome"))
 				{
@@ -53,10 +55,17 @@ public class BaseClass {
 			System.setProperty("webdriver.gecko.driver",readconfig.getfirefoxpath());//get the path of the firefox driver
 			driver=new FirefoxDriver();//
 				}
-	//	driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);//waits after opening browser and before entering url
+	driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);//waits after opening browser and before entering url
+		if(url1.equals("BASE"))
+		{
 		driver.get(baseURl);
-		//driver.get(bliteUrl);
+		}
+		else if(url1.equals("QA"))
+		{
+		driver.get(QAURL);
+		}
 		driver.manage().window().maximize();//maximizes the window based on br value
+	//driver.manage().timeouts().pageLoadTimeout(30, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 		
 		

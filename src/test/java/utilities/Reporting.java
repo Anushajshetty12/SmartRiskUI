@@ -6,6 +6,7 @@ import java.io.IOException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+
 import org.testng.ITestContext;
 import org.testng.ITestResult;
 import org.testng.TestListenerAdapter;
@@ -21,13 +22,13 @@ import com.aventstack.extentreports.reporter.configuration.Theme;
 
 public class Reporting extends TestListenerAdapter {
 	public ExtentHtmlReporter htmlReporter;
-	public ExtentReports extent;
-	public ExtentTest logger;
+	public ExtentReports extent; //Location
+	public ExtentTest logger; //data
 	
 	
-	public void onStart(ITestContext testContext )
+	public void onStart(ITestContext context)
 	{
-		String timeStamp=new SimpleDateFormat("yyyy.MM.dd.HH.mm.ss").format(new Date());
+		String timeStamp=new SimpleDateFormat("dd.MM.yyyy.HH.mm.ss.z").format(new Date());
 		String repName="Test-Report-"+timeStamp+".html";
 		htmlReporter=new ExtentHtmlReporter(System.getProperty("user.dir")+ "/test-output/"+repName);
 		htmlReporter.loadXMLConfig(System.getProperty("user.dir")+"/extent-config.xml");
@@ -75,13 +76,16 @@ public class Reporting extends TestListenerAdapter {
 	public void onTestSkipped(ITestResult tr)
 	{
 		logger=extent.createTest(tr.getName());
-		logger.log(Status.FAIL, MarkupHelper.createLabel(tr.getName(), ExtentColor.ORANGE));
+		logger.log(Status.SKIP, MarkupHelper.createLabel(tr.getName(), ExtentColor.ORANGE));
 		
 	}
 	public void onFinish(ITestContext testContext)
 	{
 		extent.flush();
 	}
+
+	
+	
 	
 	
 	

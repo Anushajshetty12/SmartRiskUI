@@ -2,18 +2,19 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
 <suite name="Failed suite [FlipkartAutomation]" guice-stage="DEVELOPMENT">
   <parameter name="browser" value="chrome"/>
+  <parameter name="url" value="BASE"/>
   <listeners>
     <listener class-name="utilities.Reporting"/>
   </listeners>
   <test thread-count="5" name="Flipkart(failed)">
     <classes>
-      <class name="testCases.TC_Profile">
+      <class name="testCases.TC_ManageAddress">
         <methods>
-          <include name="emailvalidation"/>
           <include name="tearDown"/>
+          <include name="manageAddress"/>
           <include name="Setup"/>
         </methods>
-      </class> <!-- testCases.TC_Profile -->
+      </class> <!-- testCases.TC_ManageAddress -->
     </classes>
   </test> <!-- Flipkart(failed) -->
 </suite> <!-- Failed suite [FlipkartAutomation] -->

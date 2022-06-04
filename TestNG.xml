@@ -5,21 +5,20 @@
 <listener class-name="utilities.Reporting"/>
 </listeners>
 <parameter name="browser" value="chrome"/>
+<parameter name="url" value="BASE"/>
 <test name="Flipkart" group-by-instances="true">
-<!-- <groups>
-<run>
-<include name="smoke" />
-</run>
-</groups> -->
+<!-- <groups>	
+<run>	
+ <include name="functional" />	
+ </run>	
+ </groups>	 -->
 <classes>
-<!-- <class name="testCases.TC_LoginTest_001"/>
-<class name="testCases.TC_Products"/> -->
-<!-- <class name="testCases.TC_Login"/> -->
 <class name="testCases.TC_Profile"/>
-<!-- <class name="testCases.TC_OverviewMap"/>
-<class name="testCases.TC_OverviewDashboard"/> -->
+<class name="testCases.TC_SelectProduct"/>
+<!-- <class name="testCases.TC_ManageAddress"/> -->
 </classes>
 </test>
 </suite>
+
 
 

@@ -3,6 +3,14 @@ package pageObjects;
 import static org.testng.Assert.assertNotNull;
 import static org.testng.Assert.assertTrue;
 
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+import java.util.List;
+import java.util.concurrent.TimeUnit;
+
+import org.openqa.selenium.Alert;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.StaleElementReferenceException;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
@@ -120,12 +128,15 @@ public class Profile {
 	
 	
 	
-public void givename(String random1,String random2) throws InterruptedException
+public void navigateMyProfile()
 	{
 	ldriver.navigate().refresh();
 	Actions action = new Actions(ldriver);
-	action.moveToElement(Userdropdown).perform();;
+	action.moveToElement(Userdropdown).perform();
 	MyProfile.click();
+	}
+public void updateProfile(String random1,String random2) throws InterruptedException
+{
 	Edit.click();
 	Cancel.click();
 	Edit.click();
@@ -145,43 +156,68 @@ public void givename(String random1,String random2) throws InterruptedException
 	System.out.println(a+" "+b);
 	Assert.assertEquals(a,b);
 	}
+
 	
 
 public void gender()
 {
 	if(Gender.isSelected())
 	{
-Assert.assertTrue(true);		
+Assert.assertTrue(true);	
+
+}
 	}
-	}
+
+
+
 
 public void validategmail(String email,String oldpwd,String newpwd,String retypepwd) throws InterruptedException
 {
+
 	Edit1.click();
 	Cancel1.click();
 	Edit1.click();
 	EmailTxtField.sendKeys(email);
 	SaveEmail.click();
+	@SuppressWarnings("deprecation")
 	WebDriverWait wait=new WebDriverWait(ldriver,20);
 	wait.until(ExpectedConditions.visibilityOf(Popuptext));
 		CloseOTPPopup.click();
+	Thread.sleep(500);
 		wait.until(ExpectedConditions.elementToBeClickable(ChangePwd));
 		ChangePwd.click();
-		wait.until(ExpectedConditions.elementToBeClickable(OldPwd));
-		OldPwd.sendKeys(oldpwd);
-		/*
-		 * wait.until(ExpectedConditions.refreshed(
-		 * ExpectedConditions.elementToBeClickable(NewPwd)));
-		 */
-		wait.until(ExpectedConditions.elementToBeClickable(NewPwd));
-		NewPwd.sendKeys(newpwd);
-		wait.until(ExpectedConditions.elementToBeClickable(Retypepwd));
-		Retypepwd.sendKeys(retypepwd);
+		//ldriver.manage().timeouts().setScriptTimeout(20, TimeUnit.SECONDS);
+			//ldriver.navigate().refresh();
+				try {
+					wait.until(ExpectedConditions.elementToBeClickable(OldPwd));
+					OldPwd.sendKeys(oldpwd);
+					//ldriver.manage().timeouts().setScriptTimeout(20, TimeUnit.SECONDS);
+					    while(!OldPwd.getAttribute("value").equals(oldpwd)) {
+					    	wait.until(ExpectedConditions.attributeContains(OldPwd, "value", oldpwd));
+					    }
+					    wait.until(ExpectedConditions.elementToBeClickable(NewPwd));
+					    NewPwd.sendKeys(newpwd);
+					    ldriver.manage().timeouts().setScriptTimeout(20, TimeUnit.SECONDS);
+					    while(!NewPwd.getAttribute("value").equals(newpwd)) {
+					    	wait.until(ExpectedConditions.attributeContains(NewPwd, "value", newpwd));
+					    }
+					    
+					    	wait.until(ExpectedConditions.elementToBeClickable(Retypepwd));
+					Retypepwd.sendKeys(retypepwd);
+					ldriver.manage().timeouts().setScriptTimeout(20, TimeUnit.SECONDS);
+					  while(!Retypepwd.getAttribute("value").equals(retypepwd)) {
+					    	wait.until(ExpectedConditions.attributeContains(Retypepwd, "value", retypepwd));
+					  }
+				} catch (StaleElementReferenceException e) {
+					// TODO Auto-generated catch block
+					e.printStackTrace();
+				}
+		
 		wait.until(ExpectedConditions.elementToBeClickable(ChangePwdBtn));
 		ChangePwdBtn.click();
-		CloseChangePwdpopup.click();
-		
+	CloseChangePwdpopup.click();
+
 	}
-	
+
 
 }

@@ -91,7 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">3 methods, 1 failed,   2 passed</span>
+                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title failed">Failed methods</span>
@@ -102,7 +102,7 @@
                     <div class="method-list-content failed suite-FlipkartAutomation">
                       <span>
                         <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-FlipkartAutomation" title="testCases.TC_Profile" class="method navigator-link" hash-for-method="emailvalidation">emailvalidation</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-FlipkartAutomation" title="testCases.TC_ManageAddress" class="method navigator-link" hash-for-method="manageAddress">manageAddress</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content failed suite-FlipkartAutomation -->
@@ -116,12 +116,7 @@
                     <div class="method-list-content passed suite-FlipkartAutomation">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-FlipkartAutomation" title="testCases.TC_Profile" class="method navigator-link" hash-for-method="gendervalidation">gendervalidation</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                      <span>
-                        <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-FlipkartAutomation" title="testCases.TC_Profile" class="method navigator-link" hash-for-method="navigatetoprofilepage">navigatetoprofilepage</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-FlipkartAutomation" title="testCases.TC_ManageAddress" class="method navigator-link" hash-for-method="readData">readData</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-FlipkartAutomation -->
@@ -139,34 +134,25 @@
           <div class="suite-FlipkartAutomation-class-failed">
             <div class="main-panel-header rounded-window-top">
               <img src="failed.png"/>
-              <span class="class-name">testCases.TC_Profile</span>
+              <span class="class-name">testCases.TC_ManageAddress</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="emailvalidation">
-                  </a> <!-- emailvalidation -->
-                  <span class="method-name">emailvalidation</span>
-                  <div class="stack-trace">org.openqa.selenium.ElementNotInteractableException: element not interactable
-  (Session info: chrome=99.0.4844.82)
-Build info: version: &apos;3.14.0&apos;, revision: &apos;aacccce0&apos;, time: &apos;2018-08-02T20:19:58.91Z&apos;
-System info: host: &apos;ANUSSHET-7420&apos;, ip: &apos;192.168.0.102&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
+                  <a name="manageAddress">
+                  </a> <!-- manageAddress -->
+                  <span class="method-name">manageAddress</span>
+                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on WINDOWS (c1e43b01e50596694939aa6b74053dc1)] -&gt; xpath: //div[@class=&apos;_3E8aIl _1UHYca&apos;][contains(.,&apos;EditDelete&apos;)]] (tried for 20 second(s) with 500 milliseconds interval)
+Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
+System info: host: &apos;ANUSSHET-7420&apos;, ip: &apos;192.168.0.101&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
 Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 99.0.4844.82, chrome: {chromedriverVersion: 99.0.4844.51 (d537ec02474b5..., userDataDir: C:\Users\anusshet\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:61925}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: 207a1050e59a865b3b74c2161e6d5f15
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
-	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
-	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
-	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
-	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:548)
-	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:276)
-	at org.openqa.selenium.remote.RemoteWebElement.sendKeys(RemoteWebElement.java:100)
-	at org.openqa.selenium.support.pagefactory.internal.LocatingElementHandler.invoke(LocatingElementHandler.java:51)
-	at jdk.proxy2/jdk.proxy2.$Proxy15.sendKeys(Unknown Source)
-	at pageObjects.Profile.validategmail(Profile.java:177)
-	at testCases.TC_Profile.emailvalidation(TC_Profile.java:43)
-... Removed 34 stack frames
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.62, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\anusshet\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58001}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: c1e43b01e50596694939aa6b74053dc1
+	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
+	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
+	at pageObjects.ManageAddress.manageAddress1(ManageAddress.java:109)
+	at testCases.TC_ManageAddress.manageAddress(TC_ManageAddress.java:43)
+... Removed 25 stack frames
 </div> <!-- stack-trace -->
                 </div> <!-- method-content -->
               </div> <!-- method -->
@@ -175,21 +161,14 @@ Session ID: 207a1050e59a865b3b74c2161e6d5f15
           <div class="suite-FlipkartAutomation-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testCases.TC_Profile</span>
+              <span class="class-name">testCases.TC_ManageAddress</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="gendervalidation">
-                  </a> <!-- gendervalidation -->
-                  <span class="method-name">gendervalidation</span>
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-              <div class="method">
-                <div class="method-content">
-                  <a name="navigatetoprofilepage">
-                  </a> <!-- navigatetoprofilepage -->
-                  <span class="method-name">navigatetoprofilepage</span>
+                  <a name="readData">
+                  </a> <!-- readData -->
+                  <span class="method-name">readData</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -205,12 +184,13 @@ Session ID: 207a1050e59a865b3b74c2161e6d5f15
 &lt;!DOCTYPE suite SYSTEM &quot;http://testng.org/testng-1.0.dtd&quot;&gt;
 &lt;suite name=&quot;FlipkartAutomation&quot; guice-stage=&quot;DEVELOPMENT&quot;&gt;
   &lt;parameter name=&quot;browser&quot; value=&quot;chrome&quot;/&gt;
+  &lt;parameter name=&quot;url&quot; value=&quot;BASE&quot;/&gt;
   &lt;listeners&gt;
     &lt;listener class-name=&quot;utilities.Reporting&quot;/&gt;
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Flipkart&quot; group-by-instances=&quot;true&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testCases.TC_Profile&quot;/&gt;
+      &lt;class name=&quot;testCases.TC_ManageAddress&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Flipkart --&gt;
 &lt;/suite&gt; &lt;!-- FlipkartAutomation --&gt;
@@ -250,24 +230,20 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(3);
+data.addRows(2);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'navigatetoprofilepage')
-data.setCell(0, 2, 'testCases.TC_Profile')
-data.setCell(0, 3, 4880);
+data.setCell(0, 1, 'manageAddress')
+data.setCell(0, 2, 'testCases.TC_ManageAddress')
+data.setCell(0, 3, 33786);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'emailvalidation')
-data.setCell(1, 2, 'testCases.TC_Profile')
-data.setCell(1, 3, 1462);
-data.setCell(2, 0, 2)
-data.setCell(2, 1, 'gendervalidation')
-data.setCell(2, 2, 'testCases.TC_Profile')
-data.setCell(2, 3, 22);
+data.setCell(1, 1, 'readData')
+data.setCell(1, 2, 'testCases.TC_ManageAddress')
+data.setCell(1, 3, 13);
 window.suiteTableData['FlipkartAutomation']= { tableData: data, tableDiv: 'times-div-FlipkartAutomation'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 6 seconds</span>
+              <span class="suite-total-time">Total running time: 33 seconds</span>
               <div id="times-div-FlipkartAutomation">
               </div> <!-- times-div-FlipkartAutomation -->
             </div> <!-- times-div -->
@@ -293,28 +269,24 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testCases.TC_Profile</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testCases.TC_ManageAddress</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
-                <span class="method-name">Setup(chrome)</span>
+                <span class="method-name">Setup(chrome, BASE)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">navigatetoprofilepage</span>
-                <span class="method-start">4791 ms</span>
-              </div> <!-- test-method -->
-              <div class="test-method">
-                <span class="method-name">gendervalidation</span>
-                <span class="method-start">9690 ms</span>
+                <span class="method-name">readData</span>
+                <span class="method-start">37202 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
                 <img src="failed.png">
                 </img>
-                <span class="method-name">emailvalidation</span>
-                <span class="method-start">9714 ms</span>
+                <span class="method-name">manageAddress</span>
+                <span class="method-start">37244 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">11179 ms</span>
+                <span class="method-start">71036 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

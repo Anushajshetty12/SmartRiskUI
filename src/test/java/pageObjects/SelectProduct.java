@@ -1,6 +1,11 @@
 package pageObjects;
 
+import java.util.List;
+
+import org.apache.log4j.Logger;
+import org.apache.log4j.PropertyConfigurator;
 import org.openqa.selenium.JavascriptExecutor;
+import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.CacheLookup;
@@ -12,44 +17,38 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 public class SelectProduct
 {
 WebDriver ldriver;
-
+public static Logger logger;
 
 public SelectProduct(WebDriver rdriver)
 {
 	ldriver=rdriver;
 	PageFactory.initElements(rdriver, this);
+	logger=Logger.getLogger("SelectProduct");
+	PropertyConfigurator.configure("Log4j.properties");
 }
 
 
-@FindBy(xpath = "(//img[contains(@class,'_396cs4 _3exPp9')])[1]")
-  @CacheLookup
-  WebElement ProductCatalog;
+@FindBy(xpath = "//input[contains(@title,'Search for products, brands and more')]")
+ WebElement SearchProduct;
  
-
-@FindBy(xpath = "(//img[contains(@class,'_396cs4 _3exPp9')])[1]")
+@FindBy(xpath = "//a[@class='_3izBDY'][contains(.,'vivo mobilesin Mobiles')]")
 @CacheLookup
-WebElement Product ;
+WebElement SearchResult;
 
-@FindBy(xpath = "//path[contains(@class,'eX72wL')]")
-@CacheLookup
-WebElement WishList ;
+@FindBy(xpath = "(//div[contains(@class,'_4rR01T')])")
+List<WebElement> SelectProduct ;
 
-public void selectProduct() throws InterruptedException
+public void selectProduct(String productName) throws InterruptedException
 {
-	JavascriptExecutor js = (JavascriptExecutor)ldriver;
-	// Scrolling down the page till the element is found		
-	/* js.executeScript("arguments[0].scrollIntoView();", ProductCatalog); */
-    js.executeScript("window.scrollBy(0,1000)", "");
-	 Thread.sleep(2000); 
-    WebDriverWait wait=new WebDriverWait(ldriver,200);
-	wait.until(ExpectedConditions.visibilityOf(ProductCatalog));
-	ProductCatalog.click();
-	/* Thread.sleep(5000); */
-	  Product.click();
-	 }
-
-
-
-
-
+	WebDriverWait wait=new WebDriverWait(ldriver,50);
+	wait.until(ExpectedConditions.visibilityOf(SearchProduct));
+	SearchProduct.sendKeys(productName,Keys.ENTER);
+	logger.info("selected the product");
+	Thread.sleep(2000);
+	for(int i=0;i<SelectProduct.size();i++)
+	{
+	SelectProduct.get(i).click();
+	break;
+	}
+	}
 }

@@ -25,6 +25,12 @@ public class ReadConfig
 		return url;
 	
 	}
+	public String getApplicationQAUrl()
+	{
+		String url=pro.getProperty("QA");
+		return url;
+	
+	}
 	public String getbliteUrl()
 	{
 		String url=pro.getProperty("bliteUrl");
