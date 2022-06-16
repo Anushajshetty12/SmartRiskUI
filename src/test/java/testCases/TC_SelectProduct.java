@@ -9,7 +9,7 @@ import pageObjects.UserLogin;
 
 public class TC_SelectProduct extends BaseClass
 {
-	 @Test(priority=3) 
+	 @Test(priority=4) 
 	  public void navigatetoprofilepage() throws InterruptedException 
 	  { 
 		String s="Vivo Mobiles";

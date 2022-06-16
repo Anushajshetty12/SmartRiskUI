@@ -125,15 +125,32 @@ public class Profile {
 	@CacheLookup
 	WebElement Changepwdpopup;
 	
+	@FindBy(xpath = "//div[@class='_3vhnxf'][contains(.,'SuperCoin Zone')]")
+	@CacheLookup
+	WebElement SuperCoinZone;
+	
+	@FindBy(xpath = "(//div[contains(.,'SuperCoin Balance')])")
+	@CacheLookup
+	WebElement SuperCoinZoneText;
 	
 	
 	
-public void navigateMyProfile()
+public void selectDropdown()
 	{
 	ldriver.navigate().refresh();
 	Actions action = new Actions(ldriver);
 	action.moveToElement(Userdropdown).perform();
+	}
+public void navigateToMyProfile()
+{
 	MyProfile.click();
+	}
+public void navigateToSuperCoinZone()
+{
+	SuperCoinZone.click();
+	WebDriverWait wait=new WebDriverWait(ldriver,20);
+	wait.until(ExpectedConditions.visibilityOf(SuperCoinZoneText));
+	Assert.assertTrue(SuperCoinZoneText.isDisplayed());
 	}
 public void updateProfile(String random1,String random2) throws InterruptedException
 {

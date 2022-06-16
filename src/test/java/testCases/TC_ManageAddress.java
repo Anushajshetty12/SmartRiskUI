@@ -14,7 +14,7 @@ import pageObjects.UserLogin;
 public class TC_ManageAddress extends BaseClass
 {
 	 String addr1="";
-	 @Test(priority=4) 
+	 @Test(priority=5) 
 	  public void readData() throws InterruptedException, IOException 
 	  { 
 		
@@ -30,13 +30,13 @@ public class TC_ManageAddress extends BaseClass
 				}
 			
 	  }
-	 @Test(priority=5) 
+	 @Test(priority=6) 
 	 public void manageAddress() throws InterruptedException
 	 {
 	 UserLogin u=new UserLogin(BaseClass.driver);
 	  u.userlogin(username, password);
 	  Profile p=new Profile(BaseClass.driver);
-	  p.navigateMyProfile();
+	  p.navigateToMyProfile();
 	  ManageAddress q=new ManageAddress(BaseClass.driver);
 	  q.manageAddress("anu", "7676894256", "576219", "abc");
 		System.out.println(addr1);

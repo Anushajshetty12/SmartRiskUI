@@ -24,7 +24,7 @@
     <div class="top-banner-root">
       <span class="top-banner-title-font">Test results</span>
       <br/>
-      <span class="top-banner-font-1">1 suite, 1 failed test</span>
+      <span class="top-banner-font-1">1 suite</span>
     </div> <!-- top-banner-root -->
     <div class="navigator-root">
       <div class="navigator-suite-header">
@@ -38,7 +38,7 @@
         <div class="rounded-window">
           <div class="suite-header light-rounded-window-top">
             <a href="#" panel-name="suite-FlipkartAutomation" class="navigator-link">
-              <span class="suite-name border-failed">FlipkartAutomation</span>
+              <span class="suite-name border-passed">FlipkartAutomation</span>
             </a> <!-- navigator-link -->
           </div> <!-- suite-header light-rounded-window-top -->
           <div class="navigator-suite-content">
@@ -91,21 +91,7 @@
               <div class="suite-section-content">
                 <ul>
                   <li>
-                    <span class="method-stats">2 methods, 1 failed,   1 passed</span>
-                  </li>
-                  <li>
-                    <span class="method-list-title failed">Failed methods</span>
-                    <span class="show-or-hide-methods failed">
-                      <a href="#" panel-name="suite-FlipkartAutomation" class="hide-methods failed suite-FlipkartAutomation"> (hide)</a> <!-- hide-methods failed suite-FlipkartAutomation -->
-                      <a href="#" panel-name="suite-FlipkartAutomation" class="show-methods failed suite-FlipkartAutomation"> (show)</a> <!-- show-methods failed suite-FlipkartAutomation -->
-                    </span>
-                    <div class="method-list-content failed suite-FlipkartAutomation">
-                      <span>
-                        <img src="failed.png" width="3%"/>
-                        <a href="#" panel-name="suite-FlipkartAutomation" title="testCases.TC_ManageAddress" class="method navigator-link" hash-for-method="manageAddress">manageAddress</a> <!-- method navigator-link -->
-                      </span>
-                      <br/>
-                    </div> <!-- method-list-content failed suite-FlipkartAutomation -->
+                    <span class="method-stats">4 methods,   4 passed</span>
                   </li>
                   <li>
                     <span class="method-list-title passed">Passed methods</span>
@@ -116,7 +102,22 @@
                     <div class="method-list-content passed suite-FlipkartAutomation">
                       <span>
                         <img src="passed.png" width="3%"/>
-                        <a href="#" panel-name="suite-FlipkartAutomation" title="testCases.TC_ManageAddress" class="method navigator-link" hash-for-method="readData">readData</a> <!-- method navigator-link -->
+                        <a href="#" panel-name="suite-FlipkartAutomation" title="testCases.TC_Profile" class="method navigator-link" hash-for-method="emailvalidation">emailvalidation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-FlipkartAutomation" title="testCases.TC_Profile" class="method navigator-link" hash-for-method="gendervalidation">gendervalidation</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-FlipkartAutomation" title="testCases.TC_Profile" class="method navigator-link" hash-for-method="navigatetoprofilepage">navigatetoprofilepage</a> <!-- method navigator-link -->
+                      </span>
+                      <br/>
+                      <span>
+                        <img src="passed.png" width="3%"/>
+                        <a href="#" panel-name="suite-FlipkartAutomation" title="testCases.TC_Profile" class="method navigator-link" hash-for-method="superCoinZoneValidation">superCoinZoneValidation</a> <!-- method navigator-link -->
                       </span>
                       <br/>
                     </div> <!-- method-list-content passed suite-FlipkartAutomation -->
@@ -131,44 +132,38 @@
     <div class="wrapper">
       <div class="main-panel-root">
         <div panel-name="suite-FlipkartAutomation" class="panel FlipkartAutomation">
-          <div class="suite-FlipkartAutomation-class-failed">
-            <div class="main-panel-header rounded-window-top">
-              <img src="failed.png"/>
-              <span class="class-name">testCases.TC_ManageAddress</span>
-            </div> <!-- main-panel-header rounded-window-top -->
-            <div class="main-panel-content rounded-window-bottom">
-              <div class="method">
-                <div class="method-content">
-                  <a name="manageAddress">
-                  </a> <!-- manageAddress -->
-                  <span class="method-name">manageAddress</span>
-                  <div class="stack-trace">org.openqa.selenium.TimeoutException: Expected condition failed: waiting for element to be clickable: [[ChromeDriver: chrome on WINDOWS (c1e43b01e50596694939aa6b74053dc1)] -&gt; xpath: //div[@class=&apos;_3E8aIl _1UHYca&apos;][contains(.,&apos;EditDelete&apos;)]] (tried for 20 second(s) with 500 milliseconds interval)
-Build info: version: &apos;3.141.59&apos;, revision: &apos;e82be7d358&apos;, time: &apos;2018-11-14T08:17:03&apos;
-System info: host: &apos;ANUSSHET-7420&apos;, ip: &apos;192.168.0.101&apos;, os.name: &apos;Windows 10&apos;, os.arch: &apos;amd64&apos;, os.version: &apos;10.0&apos;, java.version: &apos;16.0.2&apos;
-Driver info: org.openqa.selenium.chrome.ChromeDriver
-Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 102.0.5005.62, chrome: {chromedriverVersion: 101.0.4951.41 (93c720db8323..., userDataDir: C:\Users\anusshet\AppData\L...}, goog:chromeOptions: {debuggerAddress: localhost:58001}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
-Session ID: c1e43b01e50596694939aa6b74053dc1
-	at org.openqa.selenium.support.ui.WebDriverWait.timeoutException(WebDriverWait.java:95)
-	at org.openqa.selenium.support.ui.FluentWait.until(FluentWait.java:272)
-	at pageObjects.ManageAddress.manageAddress1(ManageAddress.java:109)
-	at testCases.TC_ManageAddress.manageAddress(TC_ManageAddress.java:43)
-... Removed 25 stack frames
-</div> <!-- stack-trace -->
-                </div> <!-- method-content -->
-              </div> <!-- method -->
-            </div> <!-- main-panel-content rounded-window-bottom -->
-          </div> <!-- suite-FlipkartAutomation-class-failed -->
           <div class="suite-FlipkartAutomation-class-passed">
             <div class="main-panel-header rounded-window-top">
               <img src="passed.png"/>
-              <span class="class-name">testCases.TC_ManageAddress</span>
+              <span class="class-name">testCases.TC_Profile</span>
             </div> <!-- main-panel-header rounded-window-top -->
             <div class="main-panel-content rounded-window-bottom">
               <div class="method">
                 <div class="method-content">
-                  <a name="readData">
-                  </a> <!-- readData -->
-                  <span class="method-name">readData</span>
+                  <a name="emailvalidation">
+                  </a> <!-- emailvalidation -->
+                  <span class="method-name">emailvalidation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="gendervalidation">
+                  </a> <!-- gendervalidation -->
+                  <span class="method-name">gendervalidation</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="navigatetoprofilepage">
+                  </a> <!-- navigatetoprofilepage -->
+                  <span class="method-name">navigatetoprofilepage</span>
+                </div> <!-- method-content -->
+              </div> <!-- method -->
+              <div class="method">
+                <div class="method-content">
+                  <a name="superCoinZoneValidation">
+                  </a> <!-- superCoinZoneValidation -->
+                  <span class="method-name">superCoinZoneValidation</span>
                 </div> <!-- method-content -->
               </div> <!-- method -->
             </div> <!-- main-panel-content rounded-window-bottom -->
@@ -190,7 +185,7 @@ Session ID: c1e43b01e50596694939aa6b74053dc1
   &lt;/listeners&gt;
   &lt;test thread-count=&quot;5&quot; name=&quot;Flipkart&quot; group-by-instances=&quot;true&quot;&gt;
     &lt;classes&gt;
-      &lt;class name=&quot;testCases.TC_ManageAddress&quot;/&gt;
+      &lt;class name=&quot;testCases.TC_Profile&quot;/&gt;
     &lt;/classes&gt;
   &lt;/test&gt; &lt;!-- Flipkart --&gt;
 &lt;/suite&gt; &lt;!-- FlipkartAutomation --&gt;
@@ -230,20 +225,28 @@ data.addColumn('number', 'Number');
 data.addColumn('string', 'Method');
 data.addColumn('string', 'Class');
 data.addColumn('number', 'Time (ms)');
-data.addRows(2);
+data.addRows(4);
 data.setCell(0, 0, 0)
-data.setCell(0, 1, 'manageAddress')
-data.setCell(0, 2, 'testCases.TC_ManageAddress')
-data.setCell(0, 3, 33786);
+data.setCell(0, 1, 'navigatetoprofilepage')
+data.setCell(0, 2, 'testCases.TC_Profile')
+data.setCell(0, 3, 48248);
 data.setCell(1, 0, 1)
-data.setCell(1, 1, 'readData')
-data.setCell(1, 2, 'testCases.TC_ManageAddress')
-data.setCell(1, 3, 13);
+data.setCell(1, 1, 'superCoinZoneValidation')
+data.setCell(1, 2, 'testCases.TC_Profile')
+data.setCell(1, 3, 2951);
+data.setCell(2, 0, 2)
+data.setCell(2, 1, 'emailvalidation')
+data.setCell(2, 2, 'testCases.TC_Profile')
+data.setCell(2, 3, 2340);
+data.setCell(3, 0, 3)
+data.setCell(3, 1, 'gendervalidation')
+data.setCell(3, 2, 'testCases.TC_Profile')
+data.setCell(3, 3, 31);
 window.suiteTableData['FlipkartAutomation']= { tableData: data, tableDiv: 'times-div-FlipkartAutomation'}
 return data;
 }
               </script>
-              <span class="suite-total-time">Total running time: 33 seconds</span>
+              <span class="suite-total-time">Total running time: 53 seconds</span>
               <div id="times-div-FlipkartAutomation">
               </div> <!-- times-div-FlipkartAutomation -->
             </div> <!-- times-div -->
@@ -269,24 +272,30 @@ return data;
           </div> <!-- main-panel-header rounded-window-top -->
           <div class="main-panel-content rounded-window-bottom">
             <div class="chronological-class">
-              <div class="chronological-class-name">testCases.TC_ManageAddress</div> <!-- chronological-class-name -->
+              <div class="chronological-class-name">testCases.TC_Profile</div> <!-- chronological-class-name -->
               <div class="configuration-class before">
                 <span class="method-name">Setup(chrome, BASE)</span>
                 <span class="method-start">0 ms</span>
               </div> <!-- configuration-class before -->
               <div class="test-method">
-                <span class="method-name">readData</span>
-                <span class="method-start">37202 ms</span>
+                <span class="method-name">navigatetoprofilepage</span>
+                <span class="method-start">46220 ms</span>
               </div> <!-- test-method -->
               <div class="test-method">
-                <img src="failed.png">
-                </img>
-                <span class="method-name">manageAddress</span>
-                <span class="method-start">37244 ms</span>
+                <span class="method-name">gendervalidation</span>
+                <span class="method-start">94495 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">emailvalidation</span>
+                <span class="method-start">94528 ms</span>
+              </div> <!-- test-method -->
+              <div class="test-method">
+                <span class="method-name">superCoinZoneValidation</span>
+                <span class="method-start">96870 ms</span>
               </div> <!-- test-method -->
               <div class="configuration-class after">
                 <span class="method-name">tearDown</span>
-                <span class="method-start">71036 ms</span>
+                <span class="method-start">99823 ms</span>
               </div> <!-- configuration-class after -->
           </div> <!-- main-panel-content rounded-window-bottom -->
         </div> <!-- panel -->

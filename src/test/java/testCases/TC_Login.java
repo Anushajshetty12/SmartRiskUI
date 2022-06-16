@@ -7,7 +7,7 @@ import pageObjects.UserLogin;
 public class TC_Login extends BaseClass
 {
 	@Test(priority=0)
-	public void userLogin()
+	public void userLogin() throws InterruptedException
 	{
 		UserLogin u=new UserLogin(driver);
 		u.userlogin(username, password);

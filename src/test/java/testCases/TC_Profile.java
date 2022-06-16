@@ -28,7 +28,8 @@ public class TC_Profile extends BaseClass
 	  UserLogin u=new UserLogin(BaseClass.driver);
 	  u.userlogin(username, password);
 	  Profile p=new Profile(BaseClass.driver);
-	  p.navigateMyProfile();
+	  p.selectDropdown();
+	  p.navigateToMyProfile();
 	  p.updateProfile(s, q);
 	  
 	  }
@@ -36,21 +37,29 @@ public class TC_Profile extends BaseClass
 	@Test(priority=1)
 	public void gendervalidation() throws InterruptedException
 	{
-				Profile p=new Profile(driver);
+		 Profile p=new Profile(driver);
 				p.gender();
 	}
 			
 	@Test(priority=2)
 	public void emailvalidation() throws InterruptedException
 	{
-				Profile p=new Profile(driver);
+			
 				String a=randomeString()+"@gmail.com";
 				String b=randomeString();
 				String c=randomeString();
 				String d=c;
+				Profile p=new Profile(BaseClass.driver);
 				p.validategmail(a,b,c,d);
 	}
-		
+	
+@Test(priority=3)
+public void superCoinZoneValidation() throws InterruptedException
+{
+	 Profile p=new Profile(BaseClass.driver);
+	p.selectDropdown();
+	p.navigateToSuperCoinZone();
+}
 			
 	
 }

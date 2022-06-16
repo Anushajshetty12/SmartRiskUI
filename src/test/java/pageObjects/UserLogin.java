@@ -28,11 +28,12 @@ public class UserLogin {
 	WebElement Login;
 	
 	
-	public void userlogin(String uname,String pwd)
+	public void userlogin(String uname,String pwd) throws InterruptedException
 	{
 		MobileEmail.sendKeys(uname);
 		Password.sendKeys(pwd);
 		Login.click();
+		Thread.sleep(5000);
 		System.out.println(ldriver.getTitle());
 		ldriver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
 		

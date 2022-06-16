@@ -14,8 +14,8 @@
  </groups>	 -->
 <classes>
 <class name="testCases.TC_Profile"/>
-<class name="testCases.TC_SelectProduct"/>
-<!-- <class name="testCases.TC_ManageAddress"/> -->
+<!-- <class name="testCases.TC_SelectProduct"/>
+<class name="testCases.TC_ManageAddress"/> -->
 </classes>
 </test>
 </suite>
